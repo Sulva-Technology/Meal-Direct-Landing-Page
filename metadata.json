@@ -1,0 +1,6 @@
+{
+  "name": "Meal Direct",
+  "description": "Premium campus-focused scheduled meal delivery platform by Sulva Tech.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
