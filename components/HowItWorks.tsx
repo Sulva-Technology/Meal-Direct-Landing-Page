@@ -54,7 +54,7 @@ export default function HowItWorks() {
             whileInView={{ width: '75%' }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="hidden lg:block absolute top-[72px] left-[12.5%] h-1 bg-green-primary shadow-[0_0_15px_rgba(22,163,74,0.5)] -translate-y-1/2 z-0" 
+            className="hidden lg:block absolute top-[72px] left-[12.5%] h-1 bg-green-primary shadow-[0_0_15px_rgba(11,107,79,0.5)] -translate-y-1/2 z-0" 
           />
 
           <div className="grid lg:grid-cols-4 gap-12 lg:gap-8 relative z-10">

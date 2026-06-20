@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Utensils, Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,9 +41,14 @@ export default function Navbar() {
         }`}>
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-green-primary to-green-secondary text-white shadow-lg shadow-green-primary/20 group-hover:shadow-green-primary/40 transition-shadow">
-              <Utensils className="w-5 h-5" />
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Meal Direct"
+              width={40}
+              height={40}
+              priority
+              className="w-10 h-10 rounded-xl shadow-lg shadow-green-primary/20 group-hover:shadow-green-primary/40 transition-shadow"
+            />
             <span className="font-display font-bold text-xl tracking-tight text-slate-900">
               Meal <span className="text-green-primary">Direct</span>
             </span>

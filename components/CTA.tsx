@@ -26,7 +26,7 @@ export default function CTACTA() {
               Schedule meals in advance, skip the lines, and enjoy stress-free campus living. Join thousands of students eating smarter today.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <button onClick={() => window.dispatchEvent(new CustomEvent('open-auth-modal', { detail: { mode: 'signup', defaultRole: 'student' }}))} className="w-full sm:w-auto px-8 py-4 bg-green-primary hover:bg-green-500 text-white rounded-2xl font-bold text-lg transition-all hover:shadow-[0_0_30px_rgba(22,163,74,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2 group">
+              <button onClick={() => window.dispatchEvent(new CustomEvent('open-auth-modal', { detail: { mode: 'signup', defaultRole: 'student' }}))} className="w-full sm:w-auto px-8 py-4 bg-green-primary hover:bg-green-500 text-white rounded-2xl font-bold text-lg transition-all hover:shadow-[0_0_30px_rgba(11,107,79,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2 group">
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

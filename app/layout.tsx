@@ -17,14 +17,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.mealdirectly.com'),
   title: 'Meal Direct | Scheduled Campus Meal Delivery',
   description: 'Premium scheduled campus meal delivery platform by Sulva Tech.',
+  icons: {
+    icon: [
+      { url: '/icon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    title: 'Meal Direct | Scheduled Campus Meal Delivery',
+    description: 'Premium scheduled campus meal delivery platform by Sulva Tech.',
+    images: ['/logofull.png'],
+  },
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased text-slate-800 bg-slate-50 min-h-screen selection:bg-[#16A34A] selection:text-white flex flex-col" suppressHydrationWarning>
+      <body className="font-sans antialiased text-slate-800 bg-slate-50 min-h-screen selection:bg-[#0B6B4F] selection:text-white flex flex-col" suppressHydrationWarning>
         <Preloader />
         <Navbar />
         <main className="flex-1">

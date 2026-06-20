@@ -85,7 +85,7 @@ export default function WhyWeAreBetter() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full lg:w-[450px] bg-gradient-to-b from-green-primary/20 to-green-primary/5 border border-green-primary/30 rounded-3xl p-8 shadow-[0_0_40px_rgba(22,163,74,0.15)] relative overflow-hidden"
+            className="w-full lg:w-[450px] bg-gradient-to-b from-green-primary/20 to-green-primary/5 border border-green-primary/30 rounded-3xl p-8 shadow-[0_0_40px_rgba(11,107,79,0.15)] relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-green-primary/20 rounded-full blur-2xl" />
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">

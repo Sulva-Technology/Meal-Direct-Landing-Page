@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Utensils } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
@@ -87,10 +87,10 @@ export default function Preloader() {
               <motion.div
                 animate={{ y: [-4, 4, -4] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-primary to-green-600 text-white shadow-[0_0_30px_rgba(22,163,74,0.3)] relative"
+                className="flex items-center justify-center w-16 h-16 rounded-2xl shadow-[0_0_30px_rgba(11,107,79,0.3)] relative overflow-hidden"
               >
-                <div className="absolute inset-0 bg-white/20 rounded-2xl animate-ping" style={{ animationDuration: '3s' }} />
-                <Utensils className="w-8 h-8 relative z-10" />
+                <div className="absolute inset-0 bg-white/20 rounded-2xl animate-ping z-10" style={{ animationDuration: '3s' }} />
+                <Image src="/logo.png" alt="Meal Direct" width={64} height={64} priority className="w-16 h-16 relative" />
               </motion.div>
             </div>
             

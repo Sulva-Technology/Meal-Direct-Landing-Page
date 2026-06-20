@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Store, GraduationCap, Bike, X, ChevronLeft, Mail, Lock, User } from 'lucide-react';
+import Image from 'next/image';
 
 type Role = 'student' | 'vendor' | 'rider' | null;
 type Mode = 'login' | 'signup';
@@ -105,6 +106,13 @@ export default function AuthModal() {
                     transition={{ duration: 0.2 }}
                   >
                     <div className="text-center mb-8">
+                      <Image
+                        src="/logo.png"
+                        alt="Meal Direct"
+                        width={56}
+                        height={56}
+                        className="w-14 h-14 rounded-2xl mx-auto mb-4 shadow-lg shadow-green-primary/20"
+                      />
                       <h2 className="text-2xl font-bold text-slate-900 mb-2">
                         {mode === 'login' ? 'Welcome back' : 'Create an account'}
                       </h2>

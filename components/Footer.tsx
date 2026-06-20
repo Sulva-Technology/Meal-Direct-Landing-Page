@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Utensils } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const openAuth = (mode: 'login' | 'signup', role: string | null = null) => {
@@ -15,9 +15,13 @@ export default function Footer() {
           
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-6">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-green-primary text-white">
-                <Utensils className="w-4 h-4" />
-              </div>
+              <Image
+                src="/logo.png"
+                alt="Meal Direct"
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-lg"
+              />
               <span className="font-display font-bold text-xl tracking-tight text-white">
                 Meal <span className="text-green-primary">Direct</span>
               </span>

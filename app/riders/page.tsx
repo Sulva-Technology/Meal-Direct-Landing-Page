@@ -52,7 +52,7 @@ export default function RidersPage() {
               >
                  <div className="absolute inset-0 bg-slate-100">
                     {/* Abstract map pattern */}
-                    <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(#16A34A 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+                    <div className="w-full h-full opacity-20" style={{ backgroundImage: 'radial-gradient(#0B6B4F 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                  </div>
                  
                  <motion.div 
@@ -71,7 +71,7 @@ export default function RidersPage() {
 
                  {/* Connection Lines */}
                  <svg className="absolute inset-0 w-full h-full z-0 opacity-50" preserveAspectRatio="none">
-                   <path d="M 50,400 C 150,400 150,250 250,250" stroke="#16A34A" strokeWidth="4" fill="none" strokeDasharray="8 8" className="animate-pulse" />
+                   <path d="M 50,400 C 150,400 150,250 250,250" stroke="#0B6B4F" strokeWidth="4" fill="none" strokeDasharray="8 8" className="animate-pulse" />
                  </svg>
               </motion.div>
             </div>
