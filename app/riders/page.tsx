@@ -39,10 +39,10 @@ export default function RidersPage() {
                     </li>
                   ))}
                </ul>
-               <button onClick={() => window.dispatchEvent(new CustomEvent('open-auth-modal', { detail: { mode: 'signup', defaultRole: 'rider' }}))} className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl font-bold text-lg transition-all hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 group w-full sm:w-auto">
+               <a href="https://rider.mealdirectly.com" className="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-2xl font-bold text-lg transition-all hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-2 group w-full sm:w-auto">
                  Apply to Ride
                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-               </button>
+               </a>
             </div>
             <div>
               <motion.div 

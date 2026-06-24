@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">Product</h4>
             <ul className="space-y-3 text-sm flex flex-col items-start">
-              <li><button onClick={() => openAuth('signup', 'student')} className="hover:text-green-primary transition-colors text-left">Order Now</button></li>
+              <li><a href="https://user.mealdirectly.com" className="hover:text-green-primary transition-colors text-left">Order Now</a></li>
               <li><Link href="/#how-it-works" className="hover:text-green-primary transition-colors">How It Works</Link></li>
               <li><Link href="/features" className="hover:text-green-primary transition-colors">Features</Link></li>
               <li><Link href="/faq" className="hover:text-green-primary transition-colors">FAQ</Link></li>
@@ -44,10 +44,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4">Partners</h4>
             <ul className="space-y-3 text-sm flex flex-col items-start">
-              <li><button onClick={() => openAuth('signup', 'vendor')} className="hover:text-green-primary transition-colors text-left">Become a Vendor</button></li>
-              <li><button onClick={() => openAuth('login', 'vendor')} className="hover:text-green-primary transition-colors text-left">Vendor Dashboard</button></li>
-              <li><button onClick={() => openAuth('signup', 'rider')} className="hover:text-green-primary transition-colors text-left">Deliver for Us</button></li>
-              <li><button onClick={() => openAuth('login', 'rider')} className="hover:text-green-primary transition-colors text-left">Rider Portal</button></li>
+              <li><a href="https://vendor.mealdirectly.com" className="hover:text-green-primary transition-colors text-left">Become a Vendor</a></li>
+              <li><a href="https://vendor.mealdirectly.com" className="hover:text-green-primary transition-colors text-left">Vendor Dashboard</a></li>
+              <li><a href="https://rider.mealdirectly.com" className="hover:text-green-primary transition-colors text-left">Deliver for Us</a></li>
+              <li><a href="https://rider.mealdirectly.com" className="hover:text-green-primary transition-colors text-left">Rider Portal</a></li>
             </ul>
           </div>
 

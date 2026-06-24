@@ -26,13 +26,13 @@ export default function CTACTA() {
               Schedule meals in advance, skip the lines, and enjoy stress-free campus living. Join thousands of students eating smarter today.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <button onClick={() => window.dispatchEvent(new CustomEvent('open-auth-modal', { detail: { mode: 'signup', defaultRole: 'student' }}))} className="w-full sm:w-auto px-8 py-4 bg-green-primary hover:bg-green-500 text-white rounded-2xl font-bold text-lg transition-all hover:shadow-[0_0_30px_rgba(11,107,79,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2 group">
+              <a href="https://user.mealdirectly.com" className="w-full sm:w-auto px-8 py-4 bg-green-primary hover:bg-green-500 text-white rounded-2xl font-bold text-lg transition-all hover:shadow-[0_0_30px_rgba(11,107,79,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2 group">
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button onClick={() => window.dispatchEvent(new CustomEvent('open-auth-modal', { detail: { mode: 'signup', defaultRole: 'vendor' }}))} className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md rounded-2xl font-bold text-lg transition-all border border-white/20">
+              </a>
+              <a href="https://vendor.mealdirectly.com" className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md rounded-2xl font-bold text-lg transition-all border border-white/20 text-center">
                 Join As Vendor
-              </button>
+              </a>
             </div>
           </div>
         </motion.div>

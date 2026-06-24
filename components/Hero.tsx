@@ -42,13 +42,13 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
-              <button onClick={() => window.dispatchEvent(new CustomEvent('open-auth-modal', { detail: { mode: 'signup', defaultRole: 'student' }}))} className="px-8 py-4 bg-green-primary hover:bg-green-600 text-white rounded-2xl font-medium text-lg transition-all hover:shadow-xl hover:shadow-green-primary/30 hover:-translate-y-1 flex items-center gap-2">
+              <a href="https://user.mealdirectly.com" className="px-8 py-4 bg-green-primary hover:bg-green-600 text-white rounded-2xl font-medium text-lg transition-all hover:shadow-xl hover:shadow-green-primary/30 hover:-translate-y-1 flex items-center gap-2">
                 Get Started
                 <ArrowRight className="w-5 h-5" />
-              </button>
-              <button onClick={() => window.dispatchEvent(new CustomEvent('open-auth-modal', { detail: { mode: 'signup', defaultRole: 'vendor' }}))} className="px-8 py-4 glass text-slate-700 hover:text-green-primary rounded-2xl font-medium text-lg transition-all hover:bg-white/60">
+              </a>
+              <a href="https://vendor.mealdirectly.com" className="px-8 py-4 glass text-slate-700 hover:text-green-primary rounded-2xl font-medium text-lg transition-all hover:bg-white/60">
                 Become a Vendor
-              </button>
+              </a>
             </div>
 
             <div className="mt-12 flex items-center gap-4">

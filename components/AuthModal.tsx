@@ -15,13 +15,22 @@ export default function AuthModal() {
 
   useEffect(() => {
     const handler = (e: any) => {
+      const defaultRole = e.detail?.defaultRole;
+      if (defaultRole) {
+        const urls = {
+          student: 'https://user.mealdirectly.com',
+          vendor: 'https://vendor.mealdirectly.com',
+          rider: 'https://rider.mealdirectly.com'
+        };
+        const targetUrl = urls[defaultRole as keyof typeof urls];
+        if (targetUrl) {
+          window.location.href = targetUrl;
+          return;
+        }
+      }
       setIsOpen(true);
       if (e.detail?.mode) setMode(e.detail.mode);
-      if (e.detail?.defaultRole) {
-        setRole(e.detail.defaultRole);
-      } else {
-        setRole(null);
-      }
+      setRole(null);
     };
     window.addEventListener('open-auth-modal', handler);
     return () => window.removeEventListener('open-auth-modal', handler);
@@ -122,21 +131,28 @@ export default function AuthModal() {
                     </div>
 
                     <div className="space-y-3">
-                      {roles.map((r) => (
-                        <button
-                          key={r.id}
-                          onClick={() => setRole(r.id)}
-                          className="w-full flex items-center gap-4 p-4 rounded-2xl border-2 border-slate-100 hover:border-green-primary bg-white hover:bg-green-50/50 transition-all text-left group"
-                        >
-                          <div className="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-green-100 flex items-center justify-center transition-colors">
-                            <r.icon className="w-6 h-6 text-slate-500 group-hover:text-green-primary transition-colors" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-slate-900">{r.title}</h3>
-                            <p className="text-sm text-slate-500">{r.desc}</p>
-                          </div>
-                        </button>
-                      ))}
+                      {roles.map((r) => {
+                        const urls = {
+                          student: 'https://user.mealdirectly.com',
+                          vendor: 'https://vendor.mealdirectly.com',
+                          rider: 'https://rider.mealdirectly.com'
+                        };
+                        return (
+                          <a
+                            key={r.id}
+                            href={urls[r.id]}
+                            className="w-full flex items-center gap-4 p-4 rounded-2xl border-2 border-slate-100 hover:border-green-primary bg-white hover:bg-green-50/50 transition-all text-left group"
+                          >
+                            <div className="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-green-100 flex items-center justify-center transition-colors">
+                              <r.icon className="w-6 h-6 text-slate-500 group-hover:text-green-primary transition-colors" />
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-slate-900">{r.title}</h3>
+                              <p className="text-sm text-slate-500">{r.desc}</p>
+                            </div>
+                          </a>
+                        );
+                      })}
                     </div>
                   </motion.div>
                 )}
