@@ -11,8 +11,8 @@ type Role = 'student' | 'vendor' | 'rider';
 // to the right subdomain instead of opening an in-page auth modal.
 const ROLE_URLS: Record<Role, string> = {
   student: 'https://user.mealdirectly.com',
-  vendor: 'https://vendors.mealdirectly.com',
-  rider: 'https://riders.mealdirectly.com',
+  vendor: 'https://vendor.mealdirectly.com',
+  rider: 'https://rider.mealdirectly.com',
 };
 
 const ROLES = [
@@ -43,8 +43,6 @@ export default function AuthModal() {
     document.body.style.overflow = isOpen ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
   }, [isOpen]);
-
-  const go = (role: Role) => { window.location.href = ROLE_URLS[role]; };
 
   return (
     <AnimatePresence>
@@ -90,9 +88,9 @@ export default function AuthModal() {
 
               <div className="space-y-3">
                 {ROLES.map((r) => (
-                  <button
+                  <a
                     key={r.id}
-                    onClick={() => go(r.id)}
+                    href={ROLE_URLS[r.id]}
                     className="w-full flex items-center gap-4 p-4 rounded-2xl border-2 border-slate-100 hover:border-green-primary bg-white hover:bg-green-50/50 transition-all text-left group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-slate-50 group-hover:bg-green-100 flex items-center justify-center transition-colors">
@@ -102,7 +100,7 @@ export default function AuthModal() {
                       <h3 className="font-bold text-slate-900">{r.title}</h3>
                       <p className="text-sm text-slate-500">{r.desc}</p>
                     </div>
-                  </button>
+                  </a>
                 ))}
               </div>
             </div>
