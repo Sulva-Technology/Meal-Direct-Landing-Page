@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 import Brand from './Brand';
-const links = [{ label: 'The experience', href: '/#how-it-works' }, { label: 'What’s next', href: '/features' }, { label: 'For kitchens', href: '/vendors' }, { label: 'For riders', href: '/riders' }];
+const links = [{ label: 'The experience', href: '/#how-it-works' }, { label: 'AI features', href: '/features' }, { label: 'For kitchens', href: '/vendors' }, { label: 'For riders', href: '/riders' }];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
