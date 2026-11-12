@@ -30,8 +30,8 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex flex-col items-start"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-green-primary/20 bg-green-50/50 mb-8 sm:mb-10">
-              <span className="flex h-2 w-2 rounded-full bg-green-primary animate-pulse" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full glass border border-green-primary/20 bg-green-50/50 mb-8 sm:mb-10">
+
               <span className="text-xs sm:text-sm font-semibold text-green-primary tracking-wide">
                 Nigeria&apos;s First Scheduled Campus Meal Delivery
               </span>

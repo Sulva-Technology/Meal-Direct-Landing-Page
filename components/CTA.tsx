@@ -20,7 +20,7 @@ export default function CTACTA() {
           <div className="relative z-10 flex flex-col items-center">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tight">
               Your Food.<br />Your Campus.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-200">Your Time.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-200">Your Convenience.</span>
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mb-10">
               Schedule meals in advance, skip the lines, and enjoy stress-free campus living. Join thousands of students eating smarter today.
