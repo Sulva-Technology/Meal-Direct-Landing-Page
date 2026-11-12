@@ -1,0 +1,12 @@
+import type { Metadata } from 'next';
+export const metadata: Metadata = { title: 'Privacy notice — draft', robots: { index: false, follow: false }, alternates: { canonical: '/privacy' } };
+export default function PrivacyPage() {
+  return <><section className="page-intro shell"><span className="eyebrow">MEAL DIRECT / YOUR INFORMATION</span><h1>Privacy notice.</h1><p>For Meal Direct, a product developed by Sulva Tech.</p></section><article className="policy shell"><div className="draft-notice"><strong>Draft for review — data practices require confirmation.</strong><br />This page is a publication outline. It must be completed against the actual student, vendor and rider systems before becoming an effective privacy notice.</div>
+  <h2>Information covered</h2><p>The final notice must identify what Meal Direct collects through its website and portals, including applicable account, order, delivery, payment-reference and support information. It must distinguish required information from optional preferences.</p>
+  <h2>How information is used</h2><p>Confirm the purposes and legal grounds for processing information, including account access, order fulfilment, delivery coordination, customer support, service improvement and any marketing.</p>
+  <h2>Sharing and service providers</h2><p>Document what is shared with kitchens, riders, payment providers and hosting or support providers. Include any international transfers and applicable safeguards. Provider names and arrangements are awaiting verification.</p>
+  <h2>Planned AI features</h2><p>The AI capabilities described on this website are planned. Before activation, this notice must explain the data used for recommendations, forecasts and support, the role of any AI providers, user controls and human review.</p>
+  <h2>Retention, security and your choices</h2><p>Confirm retention periods, account deletion procedures, applicable privacy rights, security measures and how to raise a concern. Do not treat this draft as a promise of particular retention periods or technical safeguards.</p>
+  <h2>Cookies and contact</h2><p>Confirm the cookies, analytics and storage used across the website and portals, and provide any required controls. The final notice must name the responsible legal entity, contact address and effective date. Questions can be sent to <a href="mailto:support@sulvatech.com">support@sulvatech.com</a>.</p>
+  </article></>;
+}

@@ -4,12 +4,12 @@ import VendorsContent from './VendorsContent';
 export const metadata: Metadata = {
   title: 'Sell as a Vendor',
   description:
-    'Grow your campus food business with Meal Direct. Reach more students, handle batch orders effortlessly, and get paid reliably from your vendor dashboard.',
+    'Connect your kitchen with campus students through Meal Direct. Explore scheduled ordering, vendor onboarding and planned demand forecasting.',
   alternates: { canonical: '/vendors' },
   openGraph: {
     title: 'Sell as a Vendor | Meal Direct',
     description:
-      'Reach more students, fulfil batch orders, and get paid reliably with the Meal Direct vendor platform.',
+      'Bring your kitchen to campus with Meal Direct. Explore the vendor portal and planned demand forecasting.',
     url: '/vendors',
   },
 };

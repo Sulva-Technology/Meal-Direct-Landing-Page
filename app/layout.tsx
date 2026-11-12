@@ -1,19 +1,19 @@
 import type {Metadata} from 'next';
-import { Outfit, Inter } from 'next/font/google';
+import { DM_Sans, Cormorant_Garamond } from 'next/font/google';
 import './globals.css'; // Global styles
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import AuthModal from '@/components/AuthModal';
-import Preloader from '@/components/Preloader';
 
-const outfit = Outfit({
+const outfit = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-outfit',
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-editorial',
 });
 
-const inter = Inter({
+const inter = DM_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-body',
 });
 
 export const metadata: Metadata = {
@@ -87,21 +87,19 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  themeColor: '#0B6B4F',
+  themeColor: '#173E30',
   colorScheme: 'light' as const,
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased text-slate-800 bg-slate-50 min-h-screen selection:bg-[#0B6B4F] selection:text-white flex flex-col" suppressHydrationWarning>
-        <Preloader />
+      <body>
         <Navbar />
-        <main className="flex-1">
+        <main id="main-content">
           {children}
         </main>
         <Footer />
-        <AuthModal />
       </body>
     </html>
   );

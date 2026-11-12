@@ -1,54 +1,6 @@
-'use client';
-
-import * as Accordion from '@radix-ui/react-accordion';
-import { ChevronDown } from 'lucide-react';
-import { motion } from 'motion/react';
-import CTA from '@/components/CTA';
+import { ArrowUpRight } from 'lucide-react';
+import ClosingCTA from '@/components/ClosingCTA';
 import { faqs } from './faqs';
-
-export default function FAQPage() {
-  return (
-    <>
-      <div className="pt-24 pb-12 bg-slate-50 text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 mb-6 tracking-tight">
-            Common Questions
-          </h1>
-          <p className="text-lg text-slate-600">
-            Everything you need to know about how Meal Direct works and how it can help you.
-          </p>
-        </div>
-      </div>
-      
-      <section className="pb-32 bg-slate-50">
-        <div className="max-w-3xl mx-auto px-6 sm:px-8">
-          <Accordion.Root type="single" collapsible className="space-y-4">
-            {faqs.map((faq, i) => (
-              <motion.div
-                 key={i}
-                 initial={{ opacity: 0, y: 10 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ delay: i * 0.1 }}
-              >
-                <Accordion.Item value={`item-${i}`} className="glass bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-                  <Accordion.Header>
-                    <Accordion.Trigger className="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
-                      <span className="font-bold text-lg text-slate-800 group-hover:text-green-primary transition-colors">{faq.q}</span>
-                      <ChevronDown className="w-5 h-5 text-slate-400 group-data-[state=open]:rotate-180 transition-transform duration-300" />
-                    </Accordion.Trigger>
-                  </Accordion.Header>
-                  <Accordion.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                    <div className="p-6 pt-0 text-slate-600 leading-relaxed">
-                      {faq.a}
-                    </div>
-                  </Accordion.Content>
-                </Accordion.Item>
-              </motion.div>
-            ))}
-          </Accordion.Root>
-        </div>
-      </section>
-      <CTA />
-    </>
-  );
+export default function FaqContent() {
+  return <><section className="page-intro shell"><span className="eyebrow">A FEW THINGS TO KNOW</span><h1>Good questions.<br /><em>Clear answers.</em></h1><p>From choosing your first meal to understanding what’s coming next.</p></section><section className="faq-layout shell"><aside className="faq-aside"><h2>Need a hand?</h2><p>For an existing order, include your order reference so the team can help you find the right answer.</p><a className="text-link" href="mailto:support@sulvatech.com">Contact the team <ArrowUpRight size={17} /></a></aside><div className="faq-list">{faqs.map(faq => <details key={faq.q}><summary>{faq.q}</summary><p>{faq.a}</p></details>)}</div></section><ClosingCTA /></>;
 }
